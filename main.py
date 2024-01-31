@@ -1,4 +1,5 @@
 import csv
+import time
 from typing import Any
 
 from web3 import Web3
@@ -53,6 +54,7 @@ def main():
                 balances = get_native_balances(wallet)
                 if balances:
                     csv_writer.writerow(balances)
+                time.sleep(0.5)
 
 
 if __name__ == '__main__':
